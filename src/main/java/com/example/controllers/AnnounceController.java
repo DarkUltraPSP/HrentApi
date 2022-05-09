@@ -26,7 +26,7 @@ public class AnnounceController {
 
     @RequestMapping(value = "/api/announces", method = RequestMethod.GET)
     public List<Announce> getAnnounces() {
-        return "test";
+        return announceService.findOneById(id);
     }
 
     @RequestMapping(value = "/api/announce/{id}", method = RequestMethod.GET)
